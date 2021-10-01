@@ -1,0 +1,826 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+/*     background:transparent; */
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select, textarea  {
+    vertical-align:middle;
+    border: 0px solid transparent;
+}
+
+input:focus, textarea:focus  {
+    border: 0px solid transparent;
+    outline-width: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+button{
+	cursor:pointer;
+}
+
+button:disabled,
+button[disabled],
+input[type=radio]:disabled + label{ 
+	opacity: 0.5;   
+	pointer-events: none;
+}
+
+/* ===================== COLOUR CODES  ===================== */
+ :root {
+	--grey: hsla(204, 8%, 26%, 1); /*rgba(61,67,71,1.0);*/
+	--gold: hsla(40, 78%, 45%, 1);   /*rgba(205, 145, 25 ,1.0);*/
+	--dark_blue: hsla(214, 83%, 14%, 1); /*rgba(6,32,66,1.0);*/
+    --light_blue: hsla(213, 69%, 97% ,1); /*rgba(244,248,253,1.0)*/
+     
+    --colour_type_01: white; /*rgba(61,67,71,1.0);*/
+	--colour_type_02: grey;   /*rgba(205, 145, 25 ,1.0);*/
+	--colour_type_03: hsla(204, 8%, 15%, 1); /*rgba(6,32,66,1.0);*/
+    --colour_type_02-opaque: hsla(204, 8%, 50%, 0.75); /*rgba(6,32,66,1.0);*/
+	 
+	--border-rad: 0.5vh;
+    --border-type-1: 1px solid var(--colour_type_01);
+    --border-type-2: 1px solid var(--colour_type_02);
+    --border-type-3: 1px solid var(--colour_type_03);  
+    --border-type-4: 1px solid var(--gold);
+}
+
+
+/* ===================== THROUBLESHOOTER  ===================== */
+/*
+ 	* {
+	  border: 1px solid var(--grey) !important;
+	} 
+*/
+
+
+/*MY CODE*/ 
+/* Hide Scrollbar */
+/* ::-webkit-scrollbar {
+display: none;
+} */
+
+
+/* ================ BACKGROUND STYLE ================ */
+.background {
+	position: fixed;
+	width:100%;
+	height:100vh;
+	z-index:-100;
+	top: 0;
+    
+    background: linear-gradient(-45deg,hsla(204, 15%, 90%, 1), hsla(204, 15%, 100%, 1));
+	animation-name: moveX;
+	background-size: 210% 100%;
+}
+
+@media only screen and (max-width: 1199px){	
+	@-webkit-keyframes moveX{
+		 0% {background-position: 0 0;}
+		50% {background-position: -80vw 0vh;}
+		100% {background-position: 0 0;}
+	}
+}
+
+/* ===================== MOBILE/DESKTOP ONLY  ===================== */
+.desktop{
+	display: none;
+}
+
+@media only screen and (min-width: 600px) { 
+	.mobile{
+		display: none;
+	}
+	.desktop{
+		display: block;
+	}
+}
+
+/* ========================= FONT IMPORTS  =========================*/
+@font-face {
+    font-family: "Barlow-ExtraLight";
+    src: url("//fonts.gstatic.com/s/barlow/ /SWLcTgmyMR1GjdNjixEPiQ.eot?#iefix");
+    src: url("//fonts.gstatic.com/s/barlow/v1/SWLcTgmyMR1GjdNjixEPiQ.eot?#iefix") format("eot"),
+    url("//fonts.gstatic.com/s/barlow/v1/2woyxyDnPU0v4IiqYU9D1g.woff2") format("woff2"),
+    url("//fonts.gstatic.com/s/barlow/v1/-HJgNsTwx9qXGSxqew62RQ.woff") format("woff"),
+    url("//fonts.gstatic.com/s/barlow/v1/qoExc9IJQUjYXhlVZNNLgg.ttf") format("truetype"),
+    url("//fonts.gstatic.com/l/font?kit=lYNHuF7-w_9_po3MKWoAsw&skey=32d7acf8757dbad0&v=v1#Barlow") format("svg");
+}
+
+/*
+font-family: 'Antic Didone', serif;
+font-family: 'Arsenal', sans-serif;
+font-family: 'Belleza', sans-serif;
+font-family: 'Buda', cursive;
+font-family: 'Expletus Sans', cursive;
+font-family: 'Judson', serif;
+font-family: 'Nixie One', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Stick No Bills', sans-serif;
+font-family: 'Suranna', serif;
+font-family: 'Text Me One', sans-serif;
+font-family: 'Tulpen One', cursive;
+*/
+
+/* ========================= TEXT STYLES =========================*/
+/* ---------------------------- FONTS ----------------------------*/
+.title-name{
+    z-index: 10;
+    position: absolute;
+}
+
+.vanguard,
+.title-name span:nth-child(1){
+/*    font-family: barlow-extralight,barlow,sans-serif;*/
+/*    font-family: 'Antic Didone', serif;*/
+/*    font-family: 'Arsenal', sans-serif;*/
+/*    font-family: 'Belleza', sans-serif;*/
+/*    font-family: 'Buda', cursive;*/
+/*    font-family: 'Expletus Sans', cursive;*/
+/*    font-family: 'Judson', serif;*/
+/*    font-family: 'Nixie One', cursive;*/
+/*    font-family: 'Roboto', sans-serif;*/
+    font-family: 'Stick No Bills', sans-serif;
+/*    font-family: 'Suranna', serif;*/
+/*    font-family: 'Text Me One', sans-serif;*/
+/*    font-family: 'Tulpen One', cursive;*/
+    font-weight: 300;
+    font-size: 44pt;
+    line-height: 50pt;
+}
+
+.technologists,
+.title-name span:nth-child(2){
+/*    font-family: barlow-extralight,barlow,sans-serif;*/
+/*    font-family: 'Antic Didone', serif;*/
+/*    font-family: 'Arsenal', sans-serif;*/
+/*    font-family: 'Belleza', sans-serif;*/
+/*    font-family: 'Buda', cursive;*/
+/*    font-family: 'Expletus Sans', cursive;*/
+/*    font-family: 'Judson', serif;*/
+/*    font-family: 'Nixie One', cursive;*/
+/*    font-family: 'Roboto', sans-serif;*/
+/*    font-family: 'Stick No Bills', sans-serif;*/
+/*    font-family: 'Suranna', serif;*/
+/*    font-family: 'Text Me One', sans-serif;*/
+    font-family: 'Tulpen One', cursive;
+    font-weight: 400;
+    font-size: 26pt;
+    letter-spacing: 2pt;
+}
+
+/* Body text */
+.body-text, p, label, a, span , h2, .section-title{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    line-height: 14pt;
+}
+
+.section-heading,
+.subsection-heading{
+/*    font-family: barlow-extralight,barlow,sans-serif;*/
+/*    font-family: 'Arsenal', sans-serif;*/
+/*    font-family: 'Expletus Sans', cursive;*/
+/*    font-family: 'Roboto', sans-serif;*/
+    font-family: 'Text Me One', sans-serif;
+    font-weight: 300;
+    font-size: 26pt;
+}
+
+/* Footer text */
+.footer .label, 
+.footer span,
+.footer a{
+    font-weight: 300;
+}
+
+/* ------------------------- TEXT COLOURS -------------------------*/
+.title-name{
+    color: var(--colour_type_01);
+}
+
+.body-text, p ,h2, h3 {
+    color: var(--colour_type_03);
+}
+
+nav ul li a{
+    color: var(--colour_type_01);
+}
+
+.footer span,
+.label, .footer a{
+    color: var(--colour_type_01);
+}
+
+.label, .footer a {
+    opacity: 0.6;
+}
+
+/* ------------------------- TEXT STYLES -------------------------*/
+/* === Mobile ===*/
+.vanguard,
+.technologists,
+.title-name span{
+    opacity: 0.9;
+}
+
+.vanguard,
+.title-name span:nth-child(1){
+    text-shadow: 3pt 3pt 3pt hsla(214, 50%, 14%, 1);
+}
+
+.technologists,
+.title-name span:nth-child(2){
+    text-shadow: 2pt 2pt 3pt hsla(214, 50%, 5%, 1);
+    
+    position: absolute;
+    left: 60%;
+}
+
+.subsection-heading{
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.subsection-heading::before{
+    content: '';
+    display: inline-block;   
+    
+    height: 18pt;
+    width: 1.2vmin;
+    
+    margin-right: 3vmin;
+    background-color: var(--colour_type_03);
+}
+
+.body-text, p, label {
+    display: block;
+    text-align: justify;
+}
+
+.body-text, p {
+    padding: 1vmax 0;
+}
+
+/*
+.section-heading{
+    text-align: center;
+    padding: 5vw 0 ;
+    margin: 0 5vw ;
+    border-bottom: 1px solid var(--colour_type_03);
+}
+*/
+
+/* === Tablet and Laptop ===*/
+/* === Desktop 1080 ===*/
+/* === Desktop 2K ===*/
+/* === Desktop 4K ===*/
+
+/* ========================= GLOBAL BUTTON STYLES  =========================*/
+/* === Mobile ===*/
+/* === Tablet and Laptop ===*/
+/* === Desktop 1080 ===*/
+/* === Desktop 2K ===*/
+/* === Desktop 4K ===*/
+
+/* ========================= GLOBAL ICON STYLES  =========================*/
+/* === Mobile ===*/
+/* === Tablet and Laptop ===*/
+/* === Desktop 1080 ===*/
+/* === Desktop 2K ===*/
+/* === Desktop 4K ===*/
+
+/* ========================= GLOBAL TABS STYLES  =========================*/
+/* === Mobile ===*/
+/* === Tablet and Laptop ===*/
+/* === Desktop 1080 ===*/
+/* === Desktop 2K ===*/
+/* === Desktop 4K ===*/
+
+/* ========================= MAIN LAYOUT  =========================*/
+/* ========================= HEADER ========================= */
+/* === Mobile ===*/
+#header{
+    height: 60px;
+    width: 100%;
+    
+    position: fixed;
+    top: 0;
+    left: 0;    
+    z-index: 100;
+    
+    background: rgba(18,23,24,.75);
+    border-bottom: var(--border-type-1);
+}
+
+.header-content {
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* ------------------- LOGO  -------------------*/
+.logoMainSquare{
+    width: 40px;
+    height: 40px;  
+    margin: 0 3vmin;
+    position: relative;
+/*
+    border: 2px solid var(--colour_type_03);
+    box-sizing: border-box;
+*/
+    opacity: 0.75;
+}
+
+.logoSmallSquare{
+    position: absolute;
+    width: 51%;
+    height: 51%;
+    display: block;
+    text-align: center;   
+    border: 1px solid var(--colour_type_01);
+    box-sizing: border-box;
+}
+
+.logoSmallSquare span,
+.logoSmallSquare::before{
+    color: var(--colour_type_01);
+    font-family: 'Stick No Bills', sans-serif;
+    font-weight: 300;
+    font-size: 10pt;
+}
+
+.logoSmallSquare:nth-child(1){
+    top: 0;
+    left: 0;
+}
+
+.logoSmallSquare:nth-child(1)::before{
+    content: 'V';
+}
+
+.logoSmallSquare:nth-child(2){
+    bottom: 0;
+    right: 0;
+}
+
+.logoSmallSquare:nth-child(2)::before{
+    content: 'T';
+}
+
+/* ------------------- MOBILE MENU  -------------------*/
+.menu{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+}
+
+.mobile .navWrapper{
+    padding: 5% 0;
+}
+
+.mobile .navWrapper > *{
+    z-index: 15;
+}
+
+.mobile a{
+    color: black;
+}
+
+
+
+/* ========================= SECTIONS  ========================= */
+/* === Mobile ===*/
+section {
+    height: calc(100vmax - 90px);
+    padding: 60px 5vmin 30px;
+    margin: 0 auto;
+}
+
+/*
+section:nth-child(odd){
+    background-color: rgba(18,23,24,.2);
+}
+*/
+
+/* === Tablet and Laptop ===*/
+/* === Desktop 1080 ===*/
+/* === Desktop 2K ===*/
+/* === Desktop 4K ===*/
+
+/* ------------------- HERO SECTION  -------------------*/
+/* === Mobile ===*/
+#heroSection {
+    height: 100vmax;
+    padding: 0;
+    position: relative;
+}
+
+#heroSection-background,
+#killer-image{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#heroSection-background{
+    background-color: black;  
+    z-index: 2;
+}
+
+#killer-image{
+    z-index: 3;
+    background-image: url("https://i.pinimg.com/originals/8b/03/e2/8b03e226055b661782587616d5bc3be0.jpg");
+    background-size: cover;
+    background-position: 20%;
+    opacity: 0.4;
+    animation: breath 60s linear infinite;
+}
+
+@keyframes breath {
+  0%   { background-size: 80vmax auto; }
+  50% { background-size: 100vmax auto; }
+  100% { background-size: 80vmax auto; }
+}
+
+#heroSection .title-name,
+#heroSection #intro-text{
+    z-index: 5;
+    position: absolute;
+}
+
+#heroSection .title-name{
+    top: 15%;
+    left: 10vmin;
+}
+
+#heroSection #intro-text{
+    background: rgba(18,23,24,.75);
+    padding: 5vmin 15vmin 5vmin 5vmin;
+    width: 60vmin;
+    bottom: 10vmax;
+    right: 0;  
+    opacity: 0.8;
+    
+    border: var(--border-type-1);
+    border-right: none;
+}
+
+#heroSection #intro-text p{
+    padding: 0;
+    color: var(--colour_type_01);
+}
+
+/* === Tablet and Laptop ===*/
+/* === Desktop 1080 ===*/
+/* === Desktop 2K ===*/
+/* === Desktop 4K ===*/
+
+/* ------------------- ABOUT SECTION  -------------------*/
+/* === Mobile ===*/
+
+.subsection {
+    padding: 2vmax 0;
+}
+
+.subsection:nth-child(even){
+    position: relative;
+    left: -5vmin;
+    width: 90vmin;
+    padding: 2vmax 5vmin;
+    background-color: rgba(18,23,24,.05);
+}
+
+/* === Tablet and Laptop ===*/
+/* === Desktop 1080 ===*/
+/* === Desktop 2K ===*/
+/* === Desktop 4K ===*/
+
+/* ------------------- SERVICES SECTION  -------------------*/
+/* === Mobile ===*/
+/* -------- CAROUSEL -------- */
+.carousel {
+    position: relative;
+    height: 75vmax;
+/*    height: 90%;*/
+    filter: drop-shadow(0 0 10px #0003);
+/*    perspective: 100px;*/
+}
+
+.carousel__viewport {
+/*    background-color: red;*/
+    position: absolute;
+    margin-top: 10vmin;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+/*    scroll-snap-type: x mandatory;*/
+    box-sizing: border-box;
+    border: var(--border-type-2); 
+}
+
+.carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+/*    width: 100%;*/
+/*
+    counter-increment: item; 
+    background-size: cover;
+*/
+}
+
+
+
+.carousel__snapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+.carousel__snapper-flexbox{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 70% 30%;
+}
+
+.carousel__snapper-thumbnail{
+    grid-row: 1;
+    background-size: cover;
+    border-bottom: var(--border-type-2);
+    filter: drop-shadow(0 0 5px hsla(204, 8%, 0%, 0.3));
+}
+
+.carousel__slide:nth-child(1) .carousel__snapper-thumbnail{
+    background-position: 40% 0%;
+    background-image: url("https://images.adsttc.com/media/images/5895/0cc6/e58e/ce09/9300/03c9/newsletter/objectification_2.jpg?1486163136");
+}
+
+.carousel__slide:nth-child(2) .carousel__snapper-thumbnail{
+    background-image: url("https://www.digitalsplash.tv/wp-content/uploads/2019/05/Building-8.jpg");
+}
+
+.carousel__slide:nth-child(3) .carousel__snapper-thumbnail{
+    background-image: url("https://sarayacortaville.co.uk/wp-content/themes/yootheme/cache/a4-34cc4f08.jpeg");
+}
+
+.carousel__snapper-description{
+    grid-row: 2;
+    bottom: 0;
+    padding: 5% 2vmax 10%;
+/*    background-color: var(--colour_type_01);*/
+    background-color: hsla(204, 8%, 90%, 0.85);   
+}
+
+.carousel__snapper-description .section-heading{
+    display: block;
+    font-size: 20pt;
+    text-align: center;
+    line-height: 20pt;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+    position: absolute;
+    top: 50%;
+    width: 5vmax;
+    height: 5vmax;
+    font-size: 0;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.carousel::before,
+.carousel__prev {
+  left: 0rem;
+}
+
+.carousel::after,
+.carousel__next {
+  right: 0rem;
+}
+
+.carousel__prev::before,
+.carousel__next::before{   
+    position: absolute;
+    font-family: 'Arsenal', sans-serif;
+    color: var(--colour_type_02-opaque);
+    
+    font-size: 3.5rem; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel__prev::before{ 
+    content: '\276C';
+}
+
+.carousel__next::before{ 
+    content: '\276D';
+}
+
+.carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline-block;
+}
+
+.carousel__navigation-button {
+    display: inline-block;
+    width: 2.5vmin;
+    height: 2.5vmin;
+    margin: 1.5vmax 1vmin;
+    background-color: var(--colour_type_02-opaque);
+    border-radius: 50%;
+    font-size: 0;
+/*    transition: transform 0.1s;*/
+/*    opacity: 0.5;*/
+    filter: drop-shadow(0 0 1px var(--colour_type_03));
+}
+
+
+
+/* === Tablet and Laptop ===*/
+/* === Desktop 1080 ===*/
+/* === Desktop 2K ===*/
+/* === Desktop 4K ===*/
+
+/* -------------------- SECTION CONTACT -------------------- */
+/* === Mobile ===*/
+#contactSection{
+    height: inherit;
+}
+
+#contactSection .sectionContent{
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 3vmax 0;
+}
+
+.sectionContent form > * {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 1vmax ;
+    margin: 2vmax 0;
+    background-color: hsla(204, 8%, 26%, .1);
+    box-sizing: border-box;
+    border: var(--border-type-2);
+}
+
+/* === Tablet and Laptop ===*/
+/* === Desktop 1080 ===*/
+/* === Desktop 2K ===*/
+/* === Desktop 4K ===*/
+
+
+/* ========================= FOOTER ========================= */
+/* === Mobile ===*/
+footer .copyright {
+    padding: 20px 0;
+}
+
+.contentWrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 100%;
+}
+
+footer .copyright .left, footer .copyright .right {
+/*    display: inline-block;*/
+/*    text-transform: uppercase;*/
+    line-height: 16pt;
+    letter-spacing: 1.2pt;
+    padding: 1.5vmax 0;
+    
+    text-align: center;
+}
+
+footer {
+    background-color: darkgrey;
+    background-color: rgba(18,23,24,.8);
+}
+
+
+
+
+
