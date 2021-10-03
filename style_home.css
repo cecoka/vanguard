@@ -468,15 +468,18 @@ nav ul li a{
 /* ------------------- MOBILE MENU  -------------------*/
 #menu-toggle-button{
     cursor: pointer;
-    width: 5vmax;
-    height: 5vmax;
+    width: 40px;
+    height: 40px;
     position: fixed;
-    top: 0;
     right: 0;
-    margin: 1vmax;
+    margin: 0 3vmin;
     background-color: red;
     outline: none;
     border: none;
+}
+
+#menu-toggle-button span{
+	display:block;
 }
 
 #mobile-menu{
@@ -489,7 +492,7 @@ nav ul li a{
     z-index: 10;
 }
 
-#mobile-menu .active{
+#mobile-menu.active{
 	display: block;
 }
 
