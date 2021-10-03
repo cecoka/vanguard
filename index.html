@@ -35,7 +35,11 @@
                     </nav>
                 </div>
                 
-                <div class="menu mobile">
+                <div id="mobile-menu" class="menu mobile">
+                    <button id="menu-toggle-button" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                    </button>
                     <div class="navWrapper">
                         <nav>
                             <ul>
@@ -228,5 +232,16 @@
             <div class="topBar"></div>
             <div class="bottomBar"></div>
         </div> 
+        
+        <!-- === Additional Scripts === -->
+        <!--Smooth Scrool-->
+        
+        <!--Toggle Mobile Menu-->
+		<script>
+            function toggleMobileMenu() {
+                    "use strict";
+                    document.getElementById("mobile-menu").classList.toggle("active");
+                }                
+        </script>
     </body>    
 </html>
