@@ -7,15 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
 <!--        <link rel="stylesheet" href="style.css"/>-->
         <link rel="stylesheet" href="style_home.css"/>
-        <link rel="stylesheet" href="style_background_animation.css"/>
+<!--        <link rel="stylesheet" href="style_background_animation.css"/>-->
 <!--        <link rel="stylesheet" href="style2.css"/>-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Belleza&family=Buda:wght@300&family=Expletus+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Judson:ital,wght@0,400;0,700;1,400&family=Nixie+One&family=Roboto&family=Stick+No+Bills:wght@200;300;400;500;600;700;800&family=Suranna&family=Text+Me+One&family=Tulpen+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Belleza&family=Buda:wght@300&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Expletus+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Judson:ital,wght@0,400;0,700;1,400&family=Nixie+One&family=Roboto&family=Stick+No+Bills:wght@200;300;400;500;600;700;800&family=Suranna&family=Text+Me+One&family=Tulpen+One&display=swap" rel="stylesheet">
     </head>
     
     <body class="">
-        <div class="background"></div>
+        <div class="background animation-gradient"></div>
         <header id="header">
             <div class="header-content">
                 <div class="logo">
@@ -34,24 +34,27 @@
                         </ul>
                     </nav>
                 </div>
-		    
-		<button id="menu-toggle-button" class="menu mobile" onclick="toggleMobileMenu()">
-			<span></span>
-                        <span></span>
-                </button>
+                
+                
                 
                 <div id="mobile-menu" class="menu mobile">
+                    <button id="menu-toggle-button" class="mobile" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                     
-                    <div class="navWrapper">
+                    <div class="navWrapper animation-gradient">
                         <nav>
                             <ul>
-                                <li class="menuItem"><a class="hashtagLink" target="_self" href="/#about">About Us</a></li>
-                                <li class="menuItem"><a class="hashtagLink" target="_self" href="/#services" >Services</a></li>
-                                <li class="menuItem"><a class="hashtagLink" target="_self" href="/#contact" >Contact Us</a></li>
+                                <li class="menuItem"><a class="hashtagLink section-heading" target="_self" href="">Home</a></li>
+                                <li class="menuItem"><a class="hashtagLink section-heading" target="_self" href="/#about">About Us</a></li>
+                                <li class="menuItem"><a class="hashtagLink section-heading" target="_self" href="/#services" >Services</a></li>
+                                <li class="menuItem"><a class="hashtagLink section-heading" target="_self" href="/#contact" >Contact Us</a></li>
                             </ul>
                         </nav>
-                        <div class="text">
-                            <p>Mail us at <a href="mailto:info@vanguardtechnologists.com">info@vanguardtechnologists.com</a><br />and we&rsquo;ll be in touch.
+                        <div id="menu-contact-info">
+                            <p class="body-text">Mail us at <a href="mailto:info@vanguardtechnologists.com">info@vanguardtechnologists.com</a><br />and we&rsquo;ll be in touch.
                             </p>
                         </div>
                         <div class="socials">
@@ -178,7 +181,10 @@
                             <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
 <!--                                <label for="lname">Last Name</label>-->
-                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                            <input type="text" id="cname" name="companyname" placeholder="Your company name..">
+                            
+                            <!--                                <label for="lname">Last Name</label>-->
+                            <input type="text" id="email" name="email" placeholder="Your email address..">
 
 <!--                                <label for="subject">Subject</label>-->
                             <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
@@ -243,7 +249,41 @@
             function toggleMobileMenu() {
                     "use strict";
                     document.getElementById("mobile-menu").classList.toggle("active");
-                }                
+//                    document.getElementById("menu-toggle-button").classList.toggle("active");
+                }    
+            function getItemPosition(){
+                let SecAbout = document.getElementById("aboutSection")
+                let top = SecAbout.getBoundingClientRect().top + SecAbout.ownerDocument.defaultView.pageYOffset;
+//                console.log(top);
+//                console.log(SecAbout.ownerDocument.defaultView.pageYOffset);
+//                console.log(SecAbout.getBoundingClientRect().top);
+                
+                
+                if (SecAbout.ownerDocument.defaultView.pageYOffset>220 && SecAbout.getElementsByClassName("subsection")[0].classList.length <=1){
+                    console.log("called");
+                    SecAbout.getElementsByClassName("subsection")[0].classList.toggle("animation-FadeInY");
+                    
+                }
+                
+                if (SecAbout.ownerDocument.defaultView.pageYOffset>440 && SecAbout.getElementsByClassName("subsection")[1].classList.length <=1){
+                    console.log("called");
+                    SecAbout.getElementsByClassName("subsection")[1].classList.toggle("animation-FadeInY");
+                    
+                }
+                
+                if (SecAbout.ownerDocument.defaultView.pageYOffset>660 && SecAbout.getElementsByClassName("subsection")[2].classList.length <=1){
+                    console.log("called");
+                    SecAbout.getElementsByClassName("subsection")[2].classList.toggle("animation-FadeInY");
+                    
+                }
+                
+                
+//                let el = /* get your el */;
+//                let top = el.getBoundingClientRect().top + el.ownerDocument.defaultView.pageYOffset
+            }
+            window.onscroll = function () {
+                getItemPosition();
+            };
         </script>
     </body>    
 </html>
