@@ -596,6 +596,7 @@ nav ul li a{
     padding: 10vmax 10vmin;
     opacity: 0;
     z-index: -1;
+	visibility: hidden;
     
     -webkit-transition: .25s ease-in-out;
     -moz-transition: .25s ease-in-out;
@@ -610,6 +611,7 @@ nav ul li a{
 
 #mobile-menu.active .navWrapper{
 	opacity: 1;
+	visibility: visible;
 }
 
 #mobile-menu .navWrapper > *{
