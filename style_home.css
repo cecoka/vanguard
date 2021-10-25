@@ -365,8 +365,8 @@ font-family: 'Tulpen One', cursive;
 @media only screen and (min-width: 1200px) { 
     /* Body text */
     .body-text, p, label, a, span , h2, .section-title{
-        font-size: 1em;
-        line-height: 1.5em;
+        font-size: 0.9em;
+        line-height: 1.6em;
     }
     
     .section-heading,
