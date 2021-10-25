@@ -300,12 +300,13 @@ font-family: 'Tulpen One', cursive;
 /*    font-family: 'Roboto', sans-serif;*/
 /*    font-family: 'Text Me One', sans-serif;*/
     font-family: 'Lato',sans-serif;
-    font-weight: 300;
+    font-weight: 300;	
 }
 
 .section-heading,
-.subsection-heading,{
-    font-size: 26pt;
+.subsection-heading,
+#mobile-menu .section-heading{
+    font-size: 24pt;	
 }
 
 #mobile-menu .section-heading{
