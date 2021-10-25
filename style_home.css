@@ -285,7 +285,7 @@ font-family: 'Tulpen One', cursive;
 /* Body text */
 .body-text, p, label, a, span , h2, .section-title{
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 10pt;
     line-height: 14pt;
 }
