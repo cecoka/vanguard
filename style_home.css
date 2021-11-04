@@ -195,6 +195,14 @@ display: none;
 	}
 }
 
+@media only screen and (min-width: 1200px){	
+	@-webkit-keyframes moveX{
+		 0% {background-position: 0 0;}
+		50% {background-position: -100vmin 0;}
+		100% {background-position: 0 0;}
+	}
+}
+
 /* ===================== MOBILE/DESKTOP ONLY  ===================== */
 .desktop{
 	display: none;
