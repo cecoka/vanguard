@@ -1464,6 +1464,12 @@ section:nth-child(odd){
 
 
 /* === Desktop 1080 ===*/
+@media only screen and (min-width: 1600px) {
+	.carousel__snapper-description p {
+	    padding: 1vmin 0;
+	}
+}
+
 /* === Desktop 2K ===*/
 /* === Desktop 4K ===*/
 
