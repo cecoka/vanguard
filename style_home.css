@@ -1317,7 +1317,7 @@ section:nth-child(odd){
 
 /*     .carousel__prev::before,
 	.carousel__viewport::before, */
-	.carousel__viewport::after{ 
+	.carousel__viewport::before{ 
         content: '\276C';
     }
 
