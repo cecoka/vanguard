@@ -1289,18 +1289,22 @@ section:nth-child(odd){
         z-index: 2;
     }
 
-    .carousel::before,
-    .carousel__prev {
+/*     .carousel::before,
+    .carousel__prev, */
+	.carousel__viewport::before{
       left: 0rem;
     }
 
-    .carousel::after,
-    .carousel__next {
+/*     .carousel::after,
+    .carousel__next, */
+	.carousel__viewport::after{
       right: 0rem;
     }
 
-    .carousel__prev::before,
-    .carousel__next::before{   
+/*     .carousel__prev::before,
+    .carousel__next::before, */
+	.carousel__viewport::before,
+	.carousel__viewport::after{   
         position: absolute;
         font-family: 'Arsenal', sans-serif;
         color: var(--colour_type_02-opaque);
@@ -1311,12 +1315,21 @@ section:nth-child(odd){
         transform: translate(-50%, -50%);
     }
 
-    .carousel__prev::before{ 
+/*     .carousel__prev::before,
+	.carousel__viewport::before, */
+	.carousel__viewport::after{ 
         content: '\276C';
     }
 
-    .carousel__next::before{ 
+/*     .carousel__next::before,
+	.carousel__viewport::before, */
+	.carousel__viewport::after{ 
         content: '\276D';
+    }
+	
+	.carousel__prev,
+    .carousel__next,{
+        visibility: hidden;
     }
 
     .carousel__navigation {
@@ -1358,12 +1371,12 @@ section:nth-child(odd){
 		grid-template-rows: 60% 40%;
 	}
 	
-	.carousel::before,
+/* 	.carousel::before,
     .carousel::after,
     .carousel__prev,
     .carousel__next {
         top: 61%;
-    }
+    } */
 }
 
 /* === Tablet and Laptop ===*/
