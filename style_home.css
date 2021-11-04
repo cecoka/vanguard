@@ -196,9 +196,17 @@ display: none;
 }
 
 @media only screen and (min-width: 1200px){	
+	.background {
+	    background-size: 200vmax 100vmin;
+	}
+	
+	.animation-gradient{
+		animation-duration: 16s;
+	}
+	
 	@-webkit-keyframes moveX{
 		 0% {background-position: 0 0;}
-		50% {background-position: -100vmin 0;}
+		50% {background-position: -100vmax 0;}
 		100% {background-position: 0 0;}
 	}
 }
