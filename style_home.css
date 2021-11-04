@@ -968,6 +968,7 @@ section:nth-child(odd){
 /*         z-index: 3;
         background-size: 100%;
         background-position: 20%; */
+	    opacity: 0.8;
 	background-image: url("https://www.wirehouse.co.uk/wp-content/uploads/2018/12/pompilio.png");
     }
     
@@ -1244,8 +1245,7 @@ section:nth-child(odd){
     .carousel__slide:nth-child(1) .carousel__snapper-thumbnail{
         background-position: 40% 0%;
 /*         background-image: url("https://images.adsttc.com/media/images/5895/0cc6/e58e/ce09/9300/03c9/newsletter/objectification_2.jpg?1486163136"); */
-	    background-image: url("https://previews.123rf.com/images/mrtwister/mrtwister1606/mrtwister160600144/58918175-architectural-project-with-rolled-blueprints-and-technical-drawings.jpg");
-	    
+	    background-image: url("https://previews.123rf.com/images/mrtwister/mrtwister1606/mrtwister160600144/58918175-architectural-project-with-rolled-blueprints-and-technical-drawings.jpg");	    
     }
 	
 /*Computation*/
