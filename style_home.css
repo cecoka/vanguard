@@ -1274,61 +1274,38 @@ section:nth-child(odd){
         line-height: 20pt;
     }
 
-/*     .carousel::before,
-    .carousel::after,
-    .carousel__prev,
-    .carousel__next, */
-	.carousel__viewport::before,
-	.carousel__viewport::after{
-        position: absolute;
-        top: 52.5%;
-        width: 5vmax;
-        height: 5vmax;
-        font-size: 0;
-        background-color: transparent;
-        z-index: 2;
-    }
-
-/*     .carousel::before,
-    .carousel__prev, */
-	.carousel__viewport::before{
-      left: 0rem;
-    }
-
-/*     .carousel::after,
-    .carousel__next, */
-	.carousel__viewport::after{
-      right: 0rem;
-    }
-
-/*     .carousel__prev::before,
-    .carousel__next::before, */
 	.carousel__viewport::before,
 	.carousel__viewport::after{   
-        position: absolute;
-        font-family: 'Arsenal', sans-serif;
+	position: fixed;
+	width: 5vmax;
+        height: 5vmax;	
+		
+	font-family: 'Arsenal', sans-serif;
         color: var(--colour_type_02-opaque);
 
         font-size: 3.5rem; 
-        top: 50%;
+/*         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); */
+		
+        top: 52.5%;
+        
+        background-color: transparent;
+        z-index: 2; 
     }
 
-/*     .carousel__prev::before,
-	.carousel__viewport::before, */
 	.carousel__viewport::before{ 
         content: '\276C';
+	left: 0rem;
     }
 
-/*     .carousel__next::before,
-	.carousel__viewport::before, */
 	.carousel__viewport::after{ 
         content: '\276D';
+	right: 0rem;
     }
 	
 	.carousel__prev,
-    .carousel__next,{
+    .carousel__next{
         visibility: hidden;
     }
 
