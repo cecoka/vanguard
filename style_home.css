@@ -1451,20 +1451,25 @@ section:nth-child(odd){
         border: var(--border-type-2);
     }
 
+	/*Tech design*/
     .carousel__navigation-item:nth-child(1){
         background-position: 40% 0%;
-        background-image: url("https://images.adsttc.com/media/images/5895/0cc6/e58e/ce09/9300/03c9/newsletter/objectification_2.jpg?1486163136");
+/*         background-image: url("https://images.adsttc.com/media/images/5895/0cc6/e58e/ce09/9300/03c9/newsletter/objectification_2.jpg?1486163136"); */
+	    background-image: url("https://previews.123rf.com/images/mrtwister/mrtwister1606/mrtwister160600144/58918175-architectural-project-with-rolled-blueprints-and-technical-drawings.jpg");
         opacity: 1;
     }
 
+	/*Computation*/
     .carousel__navigation-item:nth-child(2){
         background-image: url("https://www.digitalsplash.tv/wp-content/uploads/2019/05/Building-8.jpg");
     }
 
+	/*Visualisation*/
     .carousel__navigation-item:nth-child(3){
-        background-image: url("https://sarayacortaville.co.uk/wp-content/themes/yootheme/cache/a4-34cc4f08.jpeg");
+/*         background-image: url("https://sarayacortaville.co.uk/wp-content/themes/yootheme/cache/a4-34cc4f08.jpeg"); */
+	    
+	    background-image: url("https://www.wirehouse.co.uk/wp-content/uploads/2018/12/bic-02.jpg");
     }
-
 }
 
 
