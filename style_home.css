@@ -1202,6 +1202,7 @@ section:nth-child(odd){
         left: 0;
         display: flex;
         overflow-x: scroll;
+	    overflow-y: hidden;
         counter-reset: item;
         scroll-behavior: smooth;
        scroll-snap-type: x mandatory;
