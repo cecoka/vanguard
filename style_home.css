@@ -1278,8 +1278,8 @@ section:nth-child(odd){
     .carousel::after,
     .carousel__prev,
     .carousel__next, */
-	.carousel__snapper-flexbox::before,
-	.carousel__snapper-flexbox::after{
+	.carousel__viewport::before,
+	.carousel__viewport::after{
         position: absolute;
         top: 52.5%;
         width: 5vmax;
