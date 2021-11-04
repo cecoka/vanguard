@@ -1001,7 +1001,11 @@ section:nth-child(odd){
 @media only screen and (min-width: 1600px) {
 	#heroSection #intro-text{
 		width: 39vw;
-	}		
+	}
+	
+	#heroSection #intro-text p{
+		padding-right: calc(var(--sec-side-spc-dsktp)*2);
+    }
 }
 	
 
