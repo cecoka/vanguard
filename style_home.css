@@ -383,6 +383,21 @@ font-family: 'Tulpen One', cursive;
     }  
 }
 
+/*--- Desktop ---*/
+@media only screen and (min-width: 1600px) { 
+	.vanguard,
+	.title-name span:nth-child(1){
+	    font-size: 8em;
+	    line-height: 9em;
+	}
+
+	.technologists,
+	.title-name span:nth-child(2){
+	    font-size: 4em;
+	    letter-spacing: 0.2vw;
+	}
+}
+
 /* ------------------------- TEXT COLOURS -------------------------*/
 .title-name{
     color: var(--colour_type_01);
@@ -578,13 +593,20 @@ nav ul li a{
     }
 }
 
-/*=== Desktop ===*/
+/*=== Laptop ===*/
 @media only screen and (min-width: 1200px) { 
     #header{
         height: 7.5vmin;
         
         background: transparent;
         border-bottom: none;
+    }
+}
+
+/*=== Laptop ===*/
+@media only screen and (min-width: 1600px) { 
+    #header{
+        height: 5vmin;
     }
 }
 
@@ -846,6 +868,14 @@ section:nth-child(odd){
 }
 
 /* === Desktop 2K ===*/
+@media only screen and (min-width: 1600px) {
+    section {
+        height: 100vh;
+        max-height: 100vh;
+        padding: var(--sec-top-spc-dsktp)  calc(var(--sec-side-spc-dsktp)*2) var(--sec-btm-spc-dsktp);
+        margin: 0 auto;
+    }
+}
 /* === Desktop 4K ===*/
 
 /* ------------------- HERO SECTION  -------------------*/
@@ -968,6 +998,14 @@ section:nth-child(odd){
 */
 }
 /* === Desktop 1080 ===*/
+@media only screen and (min-width: 1600px) {
+	#heroSection #intro-text{
+		width: 39vw;
+	}		
+}
+	
+
+	
 /* === Desktop 2K ===*/
 /* === Desktop 4K ===*/
 
@@ -1509,6 +1547,14 @@ footer {
     background-color: darkgrey;
     background-color: rgba(18,23,24,.8);
 }
+
+/* === Desktop ===*/
+@media only screen and (min-width: 1600px) { 
+	footer .copyright .left, footer .copyright .right {
+	    padding: 0.25vh 0;
+	}
+}
+
 
 
 
