@@ -963,13 +963,13 @@ section:nth-child(odd){
 /* === Laptop ===*/
 @media only screen and (min-width: 1200px) {
     
-/*
+
     #killer-image{
-        z-index: 3;
+/*         z-index: 3;
         background-size: 100%;
-        background-position: 20%;
+        background-position: 20%; */
+	background-image: url("https://www.wirehouse.co.uk/wp-content/uploads/2018/12/pompilio.png");
     }
-*/
     
     @keyframes breath {
       0%   { background-size: 100vw auto; }
@@ -1240,17 +1240,22 @@ section:nth-child(odd){
         filter: drop-shadow(0 0 5px hsla(204, 8%, 0%, 0.3));
     }
 
+/*Tech design*/
     .carousel__slide:nth-child(1) .carousel__snapper-thumbnail{
         background-position: 40% 0%;
-        background-image: url("https://images.adsttc.com/media/images/5895/0cc6/e58e/ce09/9300/03c9/newsletter/objectification_2.jpg?1486163136");
+/*         background-image: url("https://images.adsttc.com/media/images/5895/0cc6/e58e/ce09/9300/03c9/newsletter/objectification_2.jpg?1486163136"); */
+	    background-image: url("https://previews.123rf.com/images/mrtwister/mrtwister1606/mrtwister160600144/58918175-architectural-project-with-rolled-blueprints-and-technical-drawings.jpg");
+	    
     }
-
+	
+/*Computation*/
     .carousel__slide:nth-child(2) .carousel__snapper-thumbnail{
         background-image: url("https://www.digitalsplash.tv/wp-content/uploads/2019/05/Building-8.jpg");
     }
-
+	
+/*Visualisation*/
     .carousel__slide:nth-child(3) .carousel__snapper-thumbnail{
-        background-image: url("https://sarayacortaville.co.uk/wp-content/themes/yootheme/cache/a4-34cc4f08.jpeg");
+        background-image: url("https://www.wirehouse.co.uk/wp-content/uploads/2018/12/bic-02.jpg");
     }
 
     .carousel__snapper-description{
