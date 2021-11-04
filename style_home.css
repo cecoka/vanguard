@@ -1256,6 +1256,7 @@ section:nth-child(odd){
 /*Visualisation*/
     .carousel__slide:nth-child(3) .carousel__snapper-thumbnail{
         background-image: url("https://www.wirehouse.co.uk/wp-content/uploads/2018/12/bic-02.jpg");
+	    background-position: 53%;
     }
 
     .carousel__snapper-description{
@@ -1466,9 +1467,9 @@ section:nth-child(odd){
 
 	/*Visualisation*/
     .carousel__navigation-item:nth-child(3){
-/*         background-image: url("https://sarayacortaville.co.uk/wp-content/themes/yootheme/cache/a4-34cc4f08.jpeg"); */
-	    
+/*         background-image: url("https://sarayacortaville.co.uk/wp-content/themes/yootheme/cache/a4-34cc4f08.jpeg"); */    
 	    background-image: url("https://www.wirehouse.co.uk/wp-content/uploads/2018/12/bic-02.jpg");
+	    background-position: 57%;
     }
 }
 
