@@ -1296,12 +1296,12 @@ section:nth-child(odd){
 
 	.carousel__viewport::before{ 
         content: '\276C';
-	left: 0rem;
+	left: 3vmin;
     }
 
 	.carousel__viewport::after{ 
         content: '\276D';
-	right: 0rem;
+	right: -3vmin;
     }
 	
 	.carousel__prev,
